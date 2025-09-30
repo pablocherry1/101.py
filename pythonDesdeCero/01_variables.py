@@ -8,4 +8,4 @@ print(MyVariable, mySecondVariable)
 # Python no compila
 # Interpreta!
 
-print(len(MyVariable))
+print(len(MyVariable)) #Funcion de sistema para lenght 
