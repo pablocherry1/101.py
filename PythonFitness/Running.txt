@@ -1,0 +1,25 @@
+Iniciando análisis de Zepp20251019062749.fit...
+
+✅ === Análisis de: Zepp20251019062749.fit ===
+  Resumen de la Sesión:
+  📅 Fecha:            2025-10-19 11:27:49
+  ⏱️ Tiempo Total:     44.52 minutos
+  🏃 Distancia Total:  4.91 km
+  👟 Ritmo Promedio:   9:03 min/km
+  ❤️ FC Promedio:     155 lpm
+  ❤️ FC Máxima:       180 lpm
+  🔥 Calorías:         577 kcal
+----------------------------------------
+
+✅ === Análisis de: Zepp20251026065352.fit ===
+  Resumen de la Sesión:
+  📅 Fecha:            2025-10-26 11:53:52
+  ⏱️ Tiempo Total:     41.78 minutos
+  🏃 Distancia Total:  5.09 km
+  👟 Ritmo Promedio:   8:12 min/km
+  ❤️ FC Promedio:     156 lpm
+  ❤️ FC Máxima:       181 lpm
+  🔥 Calorías:         547 kcal
+----------------------------------------
+
+
