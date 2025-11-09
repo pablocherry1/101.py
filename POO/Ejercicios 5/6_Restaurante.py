@@ -26,16 +26,27 @@ class Restaurante:
 
         print(f"\n--- Menú de {self.nombre} ---")
         for i, plato in enumerate(self.menu):
-            print(f"{i+1}. {plato['nombre']:<20} | Precio: ${plato['precio']:<8.2f} | Tiempo: {plato['tiempo_preparacion']} min.")
+            print(f"{i+1}. {plato['nombre']:<21} | Precio: ${plato['precio']:<8} | Tiempo: {plato['tiempo_preparacion']} min.")
         print("---------------------------------")
+
+    def realizar_orden(self, lista_platos):
+
+        pass
 
 # 1. Crear el restaurante
 mi_restaurante = Restaurante("The bear")
 
 # 2. Agregar platos
-mi_restaurante.agregar_plato("Pasta Carbonara", 12.50, 20)
-mi_restaurante.agregar_plato("Sopa de Tortuga", 8.00, 15)
-mi_restaurante.agregar_plato("Filete 'Big O'", 25.99, 30)
+mi_restaurante.agregar_plato("Focaccia", 12, 20)
+mi_restaurante.agregar_plato("Welcome Broth", 10, 15)
+mi_restaurante.agregar_plato("Bucatini", 30, 20)
+mi_restaurante.agregar_plato("Seven Fishes", 70, 45)
+mi_restaurante.agregar_plato("The T-Bone", 60, 30)
+mi_restaurante.agregar_plato("The Bear Honey Bun", 10, 15)
+mi_restaurante.agregar_plato("\"The Michael\" Cannoli", 25.99, 30)
+mi_restaurante.agregar_plato("Sydney\'s Donut", 25.99, 30)
 
 # 3. Mostrar el menú
 mi_restaurante.mostrar_menu()
+
+# 4. Realizar orden
