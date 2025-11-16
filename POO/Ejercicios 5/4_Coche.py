@@ -1,6 +1,10 @@
 ''' Crea una clase Coche con los atributos marca, modelo, ano, y velocidad. Agrega metodos acelerar() para incrementar la
 velocidad en 10 unidades y frenar() para reducir la velocidad en 10 unidades (sin bajar de 0). Crea un objeto Coche, acelera y
-frena varias veces, y muestra la velocidad final del coche. '''
+frena varias veces, y muestra la velocidad final del coche. 
+----------------------------------------------------------------
+Nombre: Juan Pablo Garcia Carrillo
+Grupo: 213023_24
+Programa: Ingenieria de sistemas'''
 
 class Coche:
 
