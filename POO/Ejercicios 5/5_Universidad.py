@@ -1,5 +1,9 @@
 ''' Crear una clase Universidad con un atributo de clase num_estudiantes. 
-Cada vez que se cree un estudiante, incrementar el atributo num_estudiantes. '''
+Cada vez que se cree un estudiante, incrementar el atributo num_estudiantes. 
+----------------------------------------------------------------
+Nombre: Juan Pablo Garcia Carrillo
+Grupo: 213023_24
+Programa: Ingenieria de sistemas'''
 
 class Universidad:
     num_estudiantes = 0 

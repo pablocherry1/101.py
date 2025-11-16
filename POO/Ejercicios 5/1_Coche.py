@@ -1,6 +1,10 @@
 '''
 Crear una clase llamada Coche con atributos marca y modelo, y
 un método que imprima la marca y el modelo del coche.
+----------------------------------------------------------------
+Nombre: Juan Pablo Garcia Carrillo
+Grupo: 213023_24
+Programa: Ingenieria de sistemas
 '''
 
 # Definiendo la clase

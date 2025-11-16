@@ -1,6 +1,10 @@
 '''
 Modificar el método retirar en Banco para que verifique que hay
 suficiente saldo antes de hacer la retirada.
+----------------------------------------------------------------
+Nombre: Juan Pablo Garcia Carrillo
+Grupo: 213023_24
+Programa: Ingenieria de sistemas
 '''
 
 # Definiendo la clase

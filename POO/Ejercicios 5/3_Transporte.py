@@ -1,5 +1,9 @@
 '''Crear una clase abstracta Transporte con el método abstracto moverse. 
-Crear clases Coche y Bicicleta que implementen este método. '''
+Crear clases Coche y Bicicleta que implementen este método. 
+----------------------------------------------------------------
+Nombre: Juan Pablo Garcia Carrillo
+Grupo: 213023_24
+Programa: Ingenieria de sistemas'''
 
 from abc import ABC, abstractmethod
 
