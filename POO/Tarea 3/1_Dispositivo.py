@@ -11,10 +11,10 @@ Programa: Ingenieria de sistemas
 class Dispositivo:
     def __init__(self, sistema_operativo):
         self.sistema_operativo = sistema_operativo
-    
     def enviar_mensaje(self, mensaje):
         pass
 
+'''Subclases'''
 class Telefono(Dispositivo):
     def enviar_mensaje(self, mensaje):
         print(f"Mensaje enviado por SMS desde un celular {self.sistema_operativo}: \n{mensaje}")
@@ -27,6 +27,7 @@ class Computadora(Dispositivo):
     def enviar_mensaje(self, mensaje):
         print(f"Mensaje enviado a traves de un servidor con una computadora corriendo {self.sistema_operativo}: \n{mensaje}")
 
+'''Lista de instancias'''
 dispositivos = [
     Telefono("Android"),
     Tablet("iPadOS"),
@@ -35,6 +36,7 @@ dispositivos = [
     Computadora ("Ubuntu")
 ]
 
+'''Ciclo for para recorrer la lista'''
 for d in dispositivos:
     print("\n--- Nuevo Envío ---")
     d.enviar_mensaje("**Hello it's me**")
