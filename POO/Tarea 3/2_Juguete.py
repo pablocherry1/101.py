@@ -3,7 +3,7 @@ Define una clase Juguete con métodos encender() y apagar().
 Crea subclases Robot y Drone, cada una con un método adicional específico (caminar() en Robot y volar() en Drone). 
 Usa encapsulamiento para proteger el estado de encendido y apagado.
 ----------------------------------------------------------------
-Nombre: Juan Pablo Garcia Carrillo
+Nombre: Juan Pablo Garcia
 Grupo: 213023_24
 Programa: Ingenieria de sistemas
 '''
