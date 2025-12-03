@@ -3,7 +3,7 @@ Crea una clase Dispositivo con un método enviar_mensaje(mensaje).
 Luego, crea subclases Telefono, Tablet y Computadora, cada una con su propia implementación de enviar_mensaje(). 
 Usa polimorfismo para simular una lista de dispositivos enviando mensajes.
 ----------------------------------------------------------------
-Nombre: Juan Pablo Garcia Carrillo
+Nombre: Juan Pablo Garcia
 Grupo: 213023_24
 Programa: Ingenieria de sistemas
 '''
