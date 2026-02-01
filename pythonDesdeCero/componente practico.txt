@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Tres en Raya (Tic‑Tac‑Toe) con excepciones
+Plantilla única para entregar como un solo archivo.
+El estudiante debe completar o corregir cada sección marcada con
+# TODO o # FIXME.
+"""
+
+# ── Datos del estudiante ─────────────────────────────────────────────────────
+# TODO: Diligenciar exactamente así:
+#    ESTUDIANTE_NOMBRE = ","
+#    ESTUDIANTE_GRUPO  = "X.Y"  (p.ej. "2.A", "3.B" 213023_xx)
+ESTUDIANTE_NOMBRE = ","   # TODO: agrega tu Apellido(s), Nombre(s)
+ESTUDIANTE_GRUPO  = "213023_xx"   # TODO: agrega tu grupo
+
+print(f"Estudiante: {ESTUDIANTE_NOMBRE} — Grupo: {ESTUDIANTE_GRUPO}")
+
+# ── Clase de excepción ───────────────────────────────────────────────────────
+class JuegoTerminacion(Exception):
+    """Excepción para indicar que el juego debe terminar."""
+    pass
+
+# ── Función para imprimir el tablero ─────────────────────────────────────────
+def imprimir_tablero(tablero):  # TODO: corrige la firma de la función si falta algo
+    """Imprime el tablero de 3×3."""
+    # TODO: recorre las 9 celdas e imprime cada fila con ' | ' y separadores '---------'
+    for i in range(3):
+        fila = tablero[3*i : 3*i+3]
+        print(" | ".join(fila))
+        if i < 2:
+            print("---------")
+    print()
+
+# ── Comprobar victoria y empate ──────────────────────────────────────────────
+def comprobar_victoria(tablero, jugador):
+    """Devuelve True si el jugador ha conseguido tres en raya."""
+    combos = [
+        (0,1,2), (3,4,5), (6,7,8),   # filas
+        (0,3,6), (1,4,7), (2,5,8),   # columnas
+        (0,4,8), (2,4,6)             # diagonales
+    ]
+    # FIXME: revisa la expresión lógica; debe detectar correctamente cualquiera de los combos
+    return any(tablero[a] == tablero[b] == tablero[c] == jugador for a, b, c in combos)
+
+def tablero_lleno(tablero):
+    """True si no quedan espacios vacíos."""
+    def tablero_lleno(tablero):
+      return ' ' not in tablero
+    # TODO: completa la función para que devuelva True cuando no haya ' ' en tablero
+    return False  # placeholder
+
+# ── Pedir movimiento al jugador ─────────────────────────────────────────────
+def pedir_movimiento(tablero, jugador):
+    """
+    Pide al jugador una posición del 1 al 9 y valida la elección.
+    Controla ValueError y KeyboardInterrupt.
+    """
+    while True:
+        try:
+            entrada = input(f"Jugador {jugador}, elija casilla (1-9): ")
+            # TODO: si escribe 'salir' o 'exit', lanza JuegoTerminacion
+            if entrada == "salir" or entrada == "exit":
+                raise JuegoTerminacion()
+            pos = int(entrada) - 1
+            if pos < 0 or pos > 8:
+                print("Posición inválida. Elija otra.")
+                continue
+            if tablero[pos] != ' ':
+                print("Casilla ocupada. Elija otra.")
+                continue
+            return pos
+            # TODO: valida que pos esté en 0–8 y que tablero[pos] == ' '
+            # TODO: si todo es válido, devuelve pos
+        except ValueError:
+            print("Entrada inválida. Ingrese un número del 1 al 9 o 'salir'.")
+        except KeyboardInterrupt:
+            print("\nPartida cancelada por el usuario.")
+            raise JuegoTerminacion()
+            # TODO: maneja Ctrl+C lanzando JuegoTerminacion
+
+# ── Lógica de una partida ───────────────────────────────────────────────────
+def partida():
+    tablero = [" "] * 9
+    turno = "X"
+    imprimir_tablero(tablero)
+    # TODO: imprime el tablero inicial usando imprimir_tablero(tablero)
+    try:
+        while True:
+            # TODO: pide movimiento y actualiza tablero
+            pos = pedir_movimiento(tablero, turno)
+            tablero[pos] = turno
+            imprimir_tablero(tablero)
+            # TODO: imprime tablero
+            # TODO: comprueba victoria (comprobar_victoria) y empate (tablero_lleno)
+            if comprobar_victoria(tablero, turno):
+                print(f"¡Felicidades! El jugador {turno} ha ganado.")
+                break # Rompe el bucle para terminar
+                
+            if tablero_lleno(tablero):
+                print("¡Empate tecnico! El tablero esta lleno.")
+                break
+            # TODO: cambia turno entre 'X' y 'O'
+            if turno == "X":
+                turno = "O"
+            else:
+                turno = "X"
+            pass
+    except JuegoTerminacion:
+        print("\nSaliendo del juego... ¡Gracias por jugar! ")
+        # TODO: mensaje de partida cancelada
+        pass
+
+# ── Función principal ───────────────────────────────────────────────────────
+def main():
+    # TODO: mensaje de bienvenida indicando que se puede escribir 'salir'
+    print("Bienvenido al juego de Tres en Raya. Escribe 'salir' para salir.")
+    try:
+        while True:
+            partida()
+            respuesta = input("¿Jugar otra partida? (s/n): ")
+            if respuesta != "s":
+                break
+            # TODO: pregunta "¿Jugar otra partida? (s/n)" y controla la respuesta
+    except JuegoTerminacion:
+        print("\nPartida cancelada por el usuario.")
+        # TODO: mensaje de finalización por petición del usuario
+        pass
+    except Exception as e:
+        print(f"Error inesperado: {e}")
+        # TODO: imprime un mensaje de error inesperado usando e
+        pass
+    finally:
+        print("\nSaliendo del juego... ¡Gracias por jugar! ")
+        # TODO: mensaje final de cierre, p.ej. "Programa terminado."
+        pass
+
+if __name__ == "__main__":
+    main()
