@@ -15,3 +15,5 @@ name, surname, age = "JP", "Hodgins", 31
 print("Linea con marcadores \nNombre: {} \nNickname: {} \nEdad: {}".format(name, surname, age))
 
 print("Linea con marcadores \nNombre: %s \nNickname: %s \nEdad: %d"%(name, surname, age))
+
+print(f"Linea con f-string \nNombre: {name} \nNickname: {surname} \nEdad: {age}")
